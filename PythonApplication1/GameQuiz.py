@@ -83,7 +83,7 @@ class GameQuiz:
     DLabel= Label(ok,text=answers[index][3],font=('Times',24),bg="purple",fg="white")
 
 
-
+    @staticmethod
     def nextQuestion():
      global index
 
@@ -111,6 +111,7 @@ class GameQuiz:
 
 
     rightAnswer = 0
+    @staticmethod
     def showAnswer(arg):
      A.config(state="disabled")
      B.config(state="disabled")
@@ -162,7 +163,7 @@ class GameQuiz:
      
 
          
-    
+    @staticmethod
     def results():
         global rightAnswer
         A.destroy()
@@ -197,21 +198,25 @@ class GameQuiz:
     C.pack()
     D.pack()
 
+    
     A.config(command= lambda: GameQuiz.showAnswer(1))
     B.config(command= lambda: GameQuiz.showAnswer(2))
     C.config(command= lambda: GameQuiz.showAnswer(3))
     D.config(command= lambda: GameQuiz.showAnswer(4))
 
+    
     questionLabel = Label(ok,text="Guess The Game",font=('Times',24,BOLD),fg="Blue",bg="green",borderwidth = 3)
     questionLabel.pack()
     questionLabel.place(x="230",y="0")
 
+    
     A.place(x="0",y="200",height=70,width=60)
     B.place(x="0",y="275",height=70,width=60)
     C.place(x="0",y="350",height=70,width=60)
     D.place(x="0",y="425",height=70,width=60)
 
     
+    @staticmethod
     def startGame():
      global index
 
