@@ -3,7 +3,9 @@ from PIL import ImageTk
 import PIL.Image
 from tkinter import *
 from playsound import playsound
+
 class GameQuiz:
+
     global ok,index,answer
     global A,B,C,D
     global answerlist,answers
@@ -151,9 +153,7 @@ class GameQuiz:
      if answerlist[index] == answer:
          rightAnswer += 1
          playsound('ding.wav', block = False)
-         ok.after(1000,GameQuiz.nextQuestion)
-         
-        
+         ok.after(1000,GameQuiz.nextQuestion)   
      else:
          playsound('wrong.wav', block = False)
          ok.after(2000,GameQuiz.nextQuestion)
@@ -176,18 +176,21 @@ class GameQuiz:
         DLabel.destroy()
 
         questionLabel.config(text = "Your Final Score:")
+
         scoreLabel = Label(ok,text = str(rightAnswer) + "/" + str(5) ,font=('Times',40),fg = "beige",bg = "red",width = 7)
         scoreLabel.pack()
         scoreLabel.place(x="245",y="200")
+
         total= ((float) (rightAnswer)/5) * 100
-        percentLabel= Label(ok,text = str(total) + "%",font=('Times',40),fg="yellow",bg="black",width = 7)
+
+        percentLabel= Label(ok,text = str(int(total)) + "%",font=('Times',40),fg="yellow",bg="black",width = 7)
         percentLabel.pack()
         percentLabel.place(x = "245",y = "265")
         
 
 
 
-    questionLabel = Label(ok,text="Guess The Game",font=('Times',24,BOLD),fg="Blue",bg="green",borderwidth = 3)
+    
 
     A.pack()
     B.pack()
@@ -198,7 +201,8 @@ class GameQuiz:
     B.config(command= lambda: GameQuiz.showAnswer(2))
     C.config(command= lambda: GameQuiz.showAnswer(3))
     D.config(command= lambda: GameQuiz.showAnswer(4))
-   
+
+    questionLabel = Label(ok,text="Guess The Game",font=('Times',24,BOLD),fg="Blue",bg="green",borderwidth = 3)
     questionLabel.pack()
     questionLabel.place(x="230",y="0")
 
