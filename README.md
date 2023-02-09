@@ -11,3 +11,7 @@ Sources for the pictures and sounds used:
 [Nathan Drake](https://www.giantbomb.com/nathan-drake/3005-162/)
 
 [League of Legends](https://wildrift.leagueoflegends.com/en-us/)
+
+["Ding Sound Effect" by ryanzinw1](https://www.youtube.com/watch?v=qZC5gtOw3DU&ab_channel=ryanzinw1)
+
+["Wrong Answer Sound effect" by VS Mode](https://www.youtube.com/watch?v=4GSXyo3euR4&ab_channel=VSMode)
